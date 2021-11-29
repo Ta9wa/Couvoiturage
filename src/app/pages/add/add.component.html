@@ -1,0 +1,79 @@
+ <app-nav ></app-nav>
+
+<ion-content class="content">
+
+  
+  
+
+ <form [formGroup]="authForm" >
+ 
+
+  
+
+  <p>Depart</p>
+  <ion-select   class="inpt sma" placeholder="Choisissez votre depart"   (ionChange)="onchangeMR($event.target.value)" formControlName="mnthRSelected"  ngDefaultControl>
+    <ion-select-option value="sahloul">Sahloul</ion-select-option>
+    <ion-select-option value="epi">EPI</ion-select-option>
+    <ion-select-option value="hay riadh">Hay Riadh</ion-select-option>
+  </ion-select>
+
+  <p>Arrivée</p>
+  <ion-select   class="inpt sma" placeholder="Choisissez votre destination"   (ionChange)="onchangeMR($event.target.value)" formControlName="mnthRSelected"  ngDefaultControl>
+    <ion-select-option value="sahloul">Sahloul</ion-select-option>
+    <ion-select-option value="epi">EPI</ion-select-option>
+    <ion-select-option value="hay riadh">Hay Riadh</ion-select-option>
+  </ion-select>
+
+
+
+
+  <p> Date et heure</p>
+  <ion-grid>
+    <ion-row>
+      
+      <ion-col>
+        <ion-item class="inpt sma">
+          <ion-datetime value="" placeholder="Date"></ion-datetime>
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+        <ion-item class="inpt sma">
+          <ion-datetime placeholder="Heure" display-format="h:mm A" picker-format="h:mm A" value=""></ion-datetime>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+  <p>Nombre de places</p>
+  <ion-item class="inpt sma">
+    <ion-input placeholder="" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item-divider></ion-item-divider>
+  <p>Description</p>
+  <div class="container">
+    <input  placeholder="Description " class="inpt1"  ngDefaultControl>
+    </div>
+
+  <div *ngIf="authForm.get('username').errors && authForm.get('username').dirty">
+ <p class="errors"*ngIf ="authForm.get('username').errors.required"> <ion-icon name="close-circle-outline"></ion-icon> Valeur Est Requise</p>
+  <p class="errors"*ngIf ="authForm.get('username').errors.minlength"> <ion-icon name="close-circle-outline"></ion-icon>La longueur doit être supérieur à 3</p>
+   <p class="errors"*ngIf ="authForm.get('username').errors.maxlength"> <ion-icon name="close-circle-outline"></ion-icon>La longueur doit être inférieur à 20 </p>
+      <p class="errors"*ngIf ="authForm.get('username').errors.pattern"> <ion-icon name="close-circle-outline"></ion-icon>La valeur doit être composée seulement par des lettres et des nombres</p>
+  </div>
+
+ 
+  
+    <ng-container *ngIf="authForm.errors">
+   <p *ngIf="authForm.errors.dateRNonValide" class="errors" ><ion-icon name="close-circle-outline"></ion-icon>Vérifier la date entrer</p>
+   </ng-container>
+   
+
+  </form>
+
+  <ion-button class="btn"  (click)="onClick()"> Partager</ion-button>
+
+
+</ion-content>

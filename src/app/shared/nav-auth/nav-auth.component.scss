@@ -1,0 +1,19 @@
+a{
+  text-decoration: none;
+  color: white;
+  font-family: verdana;
+  padding:30px;
+}
+a:hover{
+  background-color: #a7c5eb;
+}
+.container {
+  width: 80%;
+  display:flex;
+  justify-content: space-between;
+  border-bottom:solid 2px white;
+  margin-left:10%
+}
+.active-item{
+  border-bottom: 2px solid white;
+}

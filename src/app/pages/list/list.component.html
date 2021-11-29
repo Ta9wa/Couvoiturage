@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+</ion-buttons>
+  <app-nav title="Liste des chéques"></app-nav>
+ <ion-card *ngIf='(ListChList.length===0)'class="card">
+    <ion-card-header class="header">
+      <p class="title">Oops ...</p>
+      <p style="text-align: center;">Il n'y a pas de chéque disponible  </p>
+      <p style="text-align: center;">Veuillez entrer vos chéques à payer</p>
+<ion-icon class="icon1" name="add-circle-outline" (click)="onClick()"></ion-icon>
+</ion-card-header>
+</ion-card>
+  <ng-container *ngFor="let cheque of ListChList ; let i = index">
+
+  <app-cheque-show [username]="cheque.reciver" [montant]="cheque.montant"  [cheque_id]="cheque.cheque_id" [index]="i" ></app-cheque-show>
+  </ng-container>
+  <ion-button class="btn" *ngIf="!(ListChList.length===0)"> <ion-icon class ="ico" name="bag-add-outline"></ion-icon> Voir Plus</ion-button>
+</ion-content>

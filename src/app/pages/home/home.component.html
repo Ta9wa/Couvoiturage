@@ -1,0 +1,64 @@
+
+<ion-content>
+
+
+
+
+  
+<app-nav title ="Salut, Mr"[user]="username" welcome="La liste des covoiturages disponobles"  ></app-nav>
+
+
+    <ion-item>
+            <img src="assets\car(1).png" id="img">
+          
+            <ion-button size ="medium" shape="round"  slot="start" (click)="OnaddClick()">Nouveau Traget</ion-button>
+            
+    </ion-item>
+       
+     
+   
+    
+
+    <div class="hr"> </div>
+
+    <!--   *ngFor="let couv of couvs" -->
+    <ion-card class="card">
+        
+      <ion-card-header class="header-card" >
+        
+        <p class="title">De (depart) vers (arrivée)</p>
+        <p class="subtitle">  (Driver name) </p>
+        <p class="subtitle">  (Heure) </p>
+      </ion-card-header>
+    
+      <ion-card-content>
+        (Description ..
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.)
+      </ion-card-content>
+      <ion-item>
+        <ion-button shape="round" fill="outline" slot="end">Je réserve</ion-button>
+      </ion-item>
+    </ion-card>
+    
+
+  <ion-slides pager>
+    <ion-slide *ngFor ="let card of ListShowHome ;let i=index" style="display: flex;">
+    <ion-card class="card1" >
+      <ion-card-header>
+        <ion-card-title style="text-align: center">{{ card.reciver }}</ion-card-title>
+        <ion-card-subtitle>{{ card.montant }} DNT</ion-card-subtitle>
+        <ion-card-content>{{ card.dateLim }}</ion-card-content>
+      </ion-card-header>
+     
+      </ion-card
+    >
+    </ion-slide>
+    </ion-slides>
+
+
+
+    
+  
+
+</ion-content>

@@ -1,0 +1,53 @@
+.divSh
+{
+  width:100%;
+  background-color:#396EB0 ;
+ padding:5px;
+ padding-bottom: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius:30px;
+}
+.white {
+  color: white ;
+
+}
+.menu{
+  margin: 5px 5px;
+  font-size: 20px;
+}
+.divIcon {
+  display:flex;
+  justify-content: space-between;
+}
+ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+.Subtitle{
+  color:white;
+margin:0px;
+      font-family: var(--f-family-text);
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu1{
+  margin-left:10px;
+
+  font-size: 12px;
+}
+.general{
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+}
+.general1{
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+}
+
+

@@ -1,0 +1,47 @@
+
+<ion-content    >
+<div style="scroll-behavior: smooth;">
+<div class="nav-container">
+  <div class="icon-container">
+<ion-buttons>
+  <ion-menu-button id="main"  class="menu white"></ion-menu-button>
+</ion-buttons>
+<ion-icon
+      name="ellipsis-vertical-outline"
+      class="menu white"
+
+    ></ion-icon>
+
+  </div>
+  <div class="text-on-right">
+  <div class="name-abr-container">
+     <p class="abr-name">{{retrivedUsername}}</p>
+  </div>
+  <p class="general white">Modifier Votre Profile</p>
+</div>
+</div  >
+
+ <div class="content-container">
+  <ng-container *ngIf="!haveImage">
+   <div class="image-container">
+    <img src="assets\default-user-image.png" alt="">
+   </div>
+  </ng-container>
+  <ng-container *ngIf="haveImage">
+
+    <div class="image-container">
+      <img [src]="retrievedImage">
+    </div>
+   </ng-container>
+  <p class="username">{{username}}</p>
+  <button class="btn"(click)="updatePhoto()">Modifier La Photo De Profil</button>
+  <button class="btn">Changer Le Mot De Passe</button>
+<hr>
+  <button class="btn rouge" (click)="doLogout()">Se Deconnecter</button>
+ </div>
+
+</div>
+<div (click)="updatePhoto()" scroll =true class="gray-background" *ngIf="showUpdatePhoto">
+<div class="change-container"></div>
+</div>
+</ion-content>

@@ -1,0 +1,128 @@
+ion-content{
+
+
+}
+
+.white {
+  color: white ;
+
+}
+.menu{
+  margin: 5px 5px;
+  font-size: 20px;
+}
+.nav-container {
+
+height: 200px;
+  background-color:#396EB0 ;
+  position: relative;
+}
+.icon-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name-abr-container{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:#CDFFB6 ;
+  margin-left: 5px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.abr-name{
+  color:#0040FF;
+}
+
+  .general{
+    letter-spacing: 1px;
+
+    margin-left: 30px;
+  font-family: ABeeZee;
+    font-size: 20px;
+  }
+  .text-on-right{
+    margin-left: 20px;
+    display:flex;
+    align-items: center;
+  }
+  .content-container{
+    position: absolute ;
+top: 130px;
+  border-top-left-radius:50px ;
+  border-top-right-radius: 50px;
+  height: 100% ;
+  min-height: 100%;
+  width: 100%;
+    background-color: #F6F5F5 ;
+    display: flex;
+    z-index: 2;
+ align-items: center;
+    flex-direction: column;
+
+  }
+  .image-container{
+margin-top: 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+ background-color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  }
+  img{
+width: 145px;
+height: 145px;
+border-radius: 50%;
+object-fit: cover;
+  }
+  .username{
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    opacity: 44%;
+  }
+  .btn{
+    width: 75%;
+    height: auto;
+border-radius: 16px;
+    background-color: #7590D6;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  hr{
+    background-color:white;
+    width: 100%;
+    height: 2px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .rouge{
+    background-color: #d67575!important;
+    margin-bottom: 50px;
+  }
+  .gray-background{
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+  width: 100%;
+    z-index: 100;
+    background-color: rgba( #000000, 0.5);
+    position: fixed;
+    overflow-y:auto ;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .change-container{
+    width: 50%;
+    height: 50%;
+    background-color: white;
+  }
+

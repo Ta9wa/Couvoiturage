@@ -1,0 +1,19 @@
+<ion-content>
+
+  <app-nav-auth></app-nav-auth>
+  <form [formGroup]="authForm" (ngSubmit)="login()">
+ <app-auth-input [form]="authForm" field="Email" placeholder="Email" icon="mail-outline" type="text" control="emailId"  ></app-auth-input>
+<ng-container *ngIf="authForm.get('emailId').errors &&  this.authForm.get('emailId').dirty" >
+  <p class="errors"*ngIf ="authForm.get('emailId').errors.required"> <ion-icon name="close-circle-outline"></ion-icon>Valeur est requise</p>
+  <p class="errors"*ngIf ="authForm.get('emailId').errors.pattern"> <ion-icon name="close-circle-outline"></ion-icon>Vérifier Votre Email</p>
+</ng-container>
+
+
+ <app-auth-input [form]="authForm"  type="password" field="Password" placeholder="Password" icon="lock-open-outline" control="password"></app-auth-input>
+ <ng-container *ngIf="authForm.get('password').errors && authForm.get('password').dirty" >
+  <p class="errors"*ngIf ="authForm.get('password').errors.required"> <ion-icon name="close-circle-outline"></ion-icon> Valeur Est Requise</p>
+
+</ng-container>
+ <button >S'identifier</button>
+</form>
+</ion-content>

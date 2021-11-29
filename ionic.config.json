@@ -1,0 +1,7 @@
+{
+  "name": "MyOffProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

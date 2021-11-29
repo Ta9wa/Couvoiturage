@@ -1,0 +1,9 @@
+<ion-content>
+
+  <app-nav-auth></app-nav-auth>
+  <app-auth-input [form]="authForm"  type="text" field="Name" placeholder="Password" icon="accessibility-outline" control="name"></app-auth-input>
+  <app-auth-input [form]="authForm" field="Email" placeholder="Email" icon="mail-outline" type="text" control="username"  ></app-auth-input>
+  <app-auth-input [form]="authForm"  type="password" field="Password" placeholder="Password" icon="lock-open-outline" control="password"></app-auth-input>
+  <app-auth-input [form]="authForm"  type="password" field="Password Confirmation" placeholder="Password Confirmation" icon="key-outline" control="passwordConfirmation"></app-auth-input>
+  <button>Enregistrer</button>
+</ion-content>

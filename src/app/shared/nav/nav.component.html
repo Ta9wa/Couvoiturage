@@ -1,0 +1,37 @@
+
+<div class="divSh">
+  <div class="divIcon" style="align-items: center;">
+    <div style="display:flex; align-items: center;">
+
+
+<ion-buttons>
+    <ion-menu-button id="main"  class="menu white"></ion-menu-button>
+</ion-buttons>
+
+      <ng-container *ngIf="router.url==='/home'">
+        
+        
+        <p class="Subtitle" style="display: inline">Bienvenue</p>
+      </ng-container>
+    </div>
+
+    
+  </div>
+   <ng-container *ngIf="router.url==='/home'">
+  <p class=" general white ">{{ title }} {{user}}</p>
+  <p class="general1 white " style="margin-top:5px;">{{welcome}}</p>
+  </ng-container>
+<ng-container *ngIf="router.url!=='/home'">
+
+  <p class=" general white ">{{ title }}</p>
+</ng-container>
+<ng-container *ngIf="router.url==='/home/profil'">
+  
+<p class="general white">Modifier Votre Profile</p>
+</ng-container>
+<ng-container *ngIf="router.url==='/home/add'">
+  
+<p class="general white" style="text-align: center;">Postuler votre traget</p>
+</ng-container>
+
+</div>

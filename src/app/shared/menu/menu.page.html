@@ -1,0 +1,51 @@
+<ion-menu contentId="menu" >
+
+  <ion-content>
+    <ion-menu-toggle auto-hide="true">
+    <div class="menu-header-bg"></div>
+
+    <div class="header-content">
+      <div *ngIf=!haveImage>
+
+    </div>
+    <div *ngIf=retrievedImage>
+      <img [src]="retrievedImage">
+  </div>
+  <div *ngIf=!retrievedImage>
+    <img src="assets\user.png">
+</div>
+    <ion-label>
+      <h2> (Nom é Prénom)</h2>
+     
+    </ion-label>
+    </div>
+
+   
+    <ion-list class="menu-items" >
+      <ng-container *ngFor="let page of pages;let i=index" >
+   <ng-container *ngIf="i==3">
+
+      <ion-item class="men-item" (click)="page.doLogout()" [routerLinkActiveOptions]="{exact:true}"  [routerLink]="page.url" routerLinkActive="active-item" >
+    <ion-icon   [name]="page.icon"></ion-icon> <p  >{{page.title}}</p>
+      </ion-item>
+    </ng-container>
+    <ng-container *ngIf="i!=3">
+
+      <ion-item class="men-item" [routerLinkActiveOptions]="{exact:true}"  [routerLink]="page.url" routerLinkActive="active-item" >
+    <ion-icon  [name]="page.icon"></ion-icon> <p  >{{page.title}}</p>
+      </ion-item>
+    </ng-container>
+    </ng-container>
+    </ion-list>
+  </ion-menu-toggle>
+  </ion-content>
+
+  
+  <ion-footer class="footer">
+    <ion-toolbar>
+      <ion-subtitle>All rights reserved</ion-subtitle>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-router-outlet id="menu"></ion-router-outlet>
