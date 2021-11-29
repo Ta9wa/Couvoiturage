@@ -1,19 +1,21 @@
-a{
-  text-decoration: none;
+
+h1{
+  font-family: comic sans ms;
+  
+  
+  text-align: center;
+}
+h2{
+  font-family: comic sans ms;
+ 
+ 
+  text-align: center;
+}
+.container{
   color: white;
-  font-family: verdana;
-  padding:30px;
-}
-a:hover{
-  background-color: #a7c5eb;
-}
-.container {
-  width: 80%;
-  display:flex;
-  justify-content: space-between;
-  border-bottom:solid 2px white;
-  margin-left:10%
-}
-.active-item{
-  border-bottom: 2px solid white;
+  padding: 15px;
+  background-color: #2E4C6D;
+  border-bottom-left-radius:150px ;
+  border-bottom-right-radius:150px ;
+  margin-bottom: 50px;
 }
