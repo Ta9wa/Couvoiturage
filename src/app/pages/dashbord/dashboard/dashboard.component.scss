@@ -1,0 +1,30 @@
+ion-header {
+    ion-toolbar, ion-item {
+      --background:#f1f5f8;
+     background: #f1f5f8;
+      padding: 0 10px;
+    }
+                    
+    ion-toolbar {
+      .bordered {
+        --border-radius: 10px;
+       --box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 18px #FFFFFF;
+      }
+    }
+
+    ion-item {
+        h3 {
+          font-weight: 700;
+          font-size: 14px;
+        }
+          font-weight: 5e0;
+          font-size: 14px;
+        }
+        ion-avatar {
+          --border-radius: 40%;
+        }
+      }
+
+      ion-content {
+        --background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+      }

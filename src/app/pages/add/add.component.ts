@@ -47,109 +47,20 @@ export class AddComponent implements OnInit {
         Validators.maxLength(20),
         Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$'),
       ]),
-      montant: new MntFormControl('', [Validators.required]),
-      mnthSelected: new FormControl('', [Validators.required]),
-      jrSelected: new FormControl('', [Validators.required]),
-      anSelected: new FormControl('', [Validators.required]),
-      mnthRSelected: new FormControl('', [Validators.required]),
-      jrRSelected: new FormControl('', [Validators.required]),
-      anRSelected: new FormControl('', [Validators.required]),
+      
     },
-    {
-      validators: [this.dateRValide.validate, this.dateValide.validate],
-    }
+    
   );
   constructor(
-    private dateValide: Datevalide,
-    private dateRValide: DateRvalide,
-    private addService: AddService
   ) { }
   ngOnInit() {
 
-    for (let i = 1; i < 32; i++) {
-      this.jours.push(i);
-    }
-    if (this.monthSelected === 'Janvier')
-      for (let i = 1; i <= 31; i++) {
-        this.jours.push(i);
-      }
-    if (!this.mRappelSelected) {
-      for (let i = 1; i <= 31; i++) {
-        this.joursR.push(i);
-      }
-    }
-    let currentYear = new Date().getFullYear();
-    for (let i = currentYear; i < currentYear + 100; i++) {
-      this.years.push(i);
-    }
+    
   }
 
-  onchangeM(m) {
-    this.monthSelected = m;
-    this.jours = [];
-    let JJmax = this.months.findIndex(
-      (element) => element.m == this.monthSelected
-    );
-    if (this.months[JJmax] !== undefined)
-      for (let i = 1; i <= this.months[JJmax].j; i++) {
-        this.jours.push(i);
-      }
-    this.authForm.patchValue({ mnthSelected: this.monthSelected });
-  }
-
-  onchangeJ(j) {
-    this.jourSelected = j;
-    this.authForm.patchValue({ jrSelected: this.jourSelected });
-  }
-  onchangeY(y) {
-    this.anneeSelected = y;
-    this.authForm.patchValue({ anSelected: this.anneeSelected });
-  }
-  onchangeMR(m) {
-    this.mRappelSelected = m;
-    this.joursR = [];
-    let JJmax = this.months.findIndex(
-      (element) => element.m == this.mRappelSelected
-    );
-    if (this.months[JJmax] !== undefined)
-      for (let i = 1; i <= this.months[JJmax].j; i++) {
-        this.joursR.push(i);
-      }
-    this.authForm.patchValue({ mnthRSelected: this.mRappelSelected });
-  }
-  onchangeJR(j) {
-    this.jRappelSelected = j;
-    this.authForm.patchValue({ jrRSelected: this.jRappelSelected });
-  }
-  onchangeYR(y) {
-    this.yRappelSelected = y;
-    this.authForm.patchValue({ anRSelected: this.yRappelSelected });
-  }
   onClick() {
 
-    this.addService.addCheque({
-      reciver: this.authForm.get('username').value,
-      montant: this.authForm.get('montant').value,
-      dateLim:this.anneeSelected+
-      '-'+
-        this.months[
-          this.months.findIndex((element) => element.m === this.monthSelected)
-        ].mi +
-        '-' +
-        this.jourSelected ,
-
-        dateRapp: this.yRappelSelected +   '-'+
-          this.months[this.months.findIndex((element) => element.m === this.mRappelSelected)
-        ].mi  +
-        '-' +
-        this.jRappelSelected
-
-
-    }).subscribe();
-
-
-
-
+  
   }
   reset(){
     this.authForm.reset();

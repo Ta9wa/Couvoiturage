@@ -10,27 +10,17 @@ import {Router,Event, NavigationEnd, NavigationStart, RouterEvent, ActivatedRout
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  @Input() user: string;
-  public ListShowHome: any[] = [];
-  index: number = 0;
- username:String;
-  constructor(private router: Router, private addService: AddService,private route:ActivatedRoute,private authService:AuthService) {
+ 
+  constructor(
+    private router: Router,
+     ) {
 
 
 
-    for (let card of addService.ListChHome ){
-     console.log (card);
-    }
+    
 
 
-        this.authService.getUsername().subscribe(
-         (result) =>{
-
-          this.username=result;
-
-
-
-          });
+        
 
 this.router.events.pipe(filter (event => event instanceof NavigationEnd)).subscribe(val=>{
 if (val instanceof NavigationEnd)
@@ -41,10 +31,7 @@ if ((val.url != "/signin" ) && (val.url !="/signup" ))
 
   ngOnInit() {
 
-    this.addService.getCheque().subscribe({next: (listCheque)=>
-      {this.ListShowHome=listCheque;
-
-     }})
+   
 
     }
 
